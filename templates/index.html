@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASPAS - Smart Chatbot</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="{{ url_for('static', path='script.js') }}" defer></script>
+</head>
+
+<body>
+  <!-- <div id="dashboard">
+    <canvas id="predictionChart"></canvas>
+  </div> -->
+
+  <div class="chat-container">
+
+    <div class="chat-header">
+      <span>🤖 ASPAS AI Assistant</span>
+      <div class="status">● Online</div>
+    </div>
+
+    <div class="chat-body" id="chat-body">
+      <div class="message bot">
+        <div class="bubble">Hello 👋 I am ASPAS. How can I help you today?</div>
+      </div>
+    </div>
+
+    <div class="chat-footer">
+      <input type="text" id="user-input" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+      <button id="voice-btn" onclick="toggleVoice()">🎤</button>
+      <button onclick="sendMessage()">➤</button>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
